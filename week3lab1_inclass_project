@@ -1,0 +1,12 @@
+package week3.lab1;
+
+public class Week3Lab1 {
+
+    public static void main(String[] args) {
+        // My code below here
+    System.out.println("Hello");
+    System.out.print("My name is ");
+    System.out.println("Nghia-Nhan D Duong");
+    }
+    
+}
