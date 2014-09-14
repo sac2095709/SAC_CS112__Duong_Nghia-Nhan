@@ -1,0 +1,65 @@
+/*
+ * CALCULATOR PROJECT
+ * Nghia-Nhan D Duong
+ * CS112.
+ */
+
+package calculator;
+
+import java.util.Scanner;
+
+public class Calculator {
+
+    public static void main(String[] args) {
+Scanner input = new Scanner (System.in);
+      int number1;
+      int number2;
+      int sum;
+      int different;
+      int product;
+      int quotient;
+      
+      System.out.print("Enter first number: ");
+       number1 = input.nextInt();
+      System.out.print("Enter second number: ");
+       number2 = input.nextInt();
+       sum = number1 + number2;
+       different = number1 - number2;
+       product = number1 * number2;
+       quotient = number1 / number2;
+     
+      System.out.println("Make your arithmetic selection from the choices below:\n"); 
+System.out.println(" 1. Addition, +"); 
+System.out.println(" 2. Subtraction, -"); 
+System.out.println(" 3. Multiplication. *"); 
+System.out.println(" 4. Division, / \n"); 
+       
+System.out.print(" Your choice?: "); 
+int choice = input.nextInt(); 
+
+if((choice!=1) && (choice!=2) && (choice!=3) && (choice!=4)) 
+{
+System.out.printf("Wrong selection, please restart again!!\n"); 
+}
+
+if((choice==1)) 
+{
+System.out.printf("%d + %d = %d.\n",number1,number2,sum);
+}
+if((choice==2)) 
+{
+System.out.printf("%d - %d = %d.\n",number1,number2,different);
+}
+
+if((choice==3)) 
+{
+System.out.printf("%d * %d = %d.\n",number1,number2,product);
+}
+
+if((choice==1)) 
+{
+System.out.printf("%d / %d = %d.\n",number1,number2,quotient);
+}
+    }
+    
+}
