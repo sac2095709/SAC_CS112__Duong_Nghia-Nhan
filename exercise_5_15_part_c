@@ -1,0 +1,62 @@
+
+package exerciseweek5q15partc;
+
+/**
+ *
+ * @author NGHIA-NHAN D DUONG
+ * @Class CS112
+ */
+public class ExerciseWeek5q15partC {
+
+    public static void main(String[] args) {
+        for (int asterisk=1;asterisk<=10;asterisk++)
+            System.out.print('*');
+        System.out.println();
+    for (int space=1;space<=1;space++)
+        System.out.print(' ');
+        for (int asterisk=1;asterisk<=9;asterisk++)
+            System.out.print('*');
+                System.out.println();
+    for (int space=1;space<=2;space++)
+        System.out.print(' ');
+        for (int asterisk=1;asterisk<=8;asterisk++)
+            System.out.print('*');
+                System.out.println();
+    for (int space=1;space<=3;space++)
+        System.out.print(' ');
+        for (int asterisk=1;asterisk<=7;asterisk++)
+            System.out.print('*');
+                System.out.println();
+    for (int space=1;space<=4;space++)
+        System.out.print(' ');
+        for (int asterisk=1;asterisk<=6;asterisk++)
+            System.out.print('*');
+                System.out.println();
+    for (int space=1;space<=5;space++)
+        System.out.print(' ');
+        for (int asterisk=1;asterisk<=5;asterisk++)
+            System.out.print('*');
+                System.out.println();
+    for (int space=1;space<=6;space++)
+        System.out.print(' ');
+        for (int asterisk=1;asterisk<=4;asterisk++)
+            System.out.print('*');
+                System.out.println();
+    for (int space=1;space<=7;space++)
+        System.out.print(' ');
+        for (int asterisk=1;asterisk<=3;asterisk++)
+            System.out.print('*');
+                System.out.println();
+    for (int space=1;space<=8;space++)
+        System.out.print(' ');
+        for (int asterisk=1;asterisk<=2;asterisk++)
+            System.out.print('*');
+                System.out.println();
+    for (int space=1;space<=9;space++)
+        System.out.print(' ');
+        for (int asterisk=1;asterisk<=1;asterisk++)
+            System.out.println('*');
+System.out.println("Nghia-Nhan D Duong, Class CMPR112");
+    }
+    
+}
