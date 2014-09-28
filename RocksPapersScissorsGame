@@ -1,0 +1,72 @@
+/*
+ * Nghia-Nhan D Duong
+ * CMPR112
+ * Java Project Week 4 Homework
+ * September 28th 2014
+ */
+
+package rockpaperscissorgame;
+import java.util.Scanner;
+/**
+ * @author NGHIA-NHAN D. DUONG
+ */
+public class RockPaperScissorGame {
+
+    
+    public static void main(String[] args) {
+    Scanner hand = new Scanner (System.in);
+    int computerHand;
+    int userHand;
+    int cpuLetter;
+    String cpu_hand;
+    String user_hand;
+        
+    System.out.println("Wellcome to \"Rocks-Papers-Scissors\" Game Challenge!");
+    System.out.println("My name is Cassidy, I am a computer user who will play with you in this game challenge!");
+    System.out.println("");
+    
+    computerHand= 1 + (int)(Math.random()*3);
+        if (computerHand==1)
+        {cpu_hand="ROCK";}
+        else if (computerHand==2)
+        {cpu_hand="PAPER";}
+        else {cpu_hand="SCISSOR";}
+        
+    System.out.print("Computer captured Cassidy\'s hand, what is your hand?\nChoose number for: 1.Rock / 2.Paper / 3.Scissor exactly!: ");
+    userHand=hand.nextInt();   
+        
+    while ((userHand!=1)&&(userHand!=2)&&(userHand!=3))
+    {
+        System.out.printf("%d is not a valid response?\nChoose number again for: 1.Rock / 2.Paper / 3.Scissor exactly!: ",userHand);
+        userHand=hand.nextInt();
+    }
+    
+        if (userHand==1)
+        {user_hand="ROCK";}
+        else if (userHand==2)
+        {user_hand="PAPER";}
+        else user_hand="SCISSOR";
+        
+    if(computerHand==userHand)
+        System.out.println("Cassidy\'s hand is "+ cpu_hand + " and your hand is " + user_hand + ". DRAW, no winner!!!");
+    else
+    {
+    if (computerHand==1)
+        { if (userHand==2)
+            System.out.println("Cassidy\'s hand is "+ cpu_hand + " and your hand is " + user_hand + ". YOU WIN!!!");
+        else System.out.println("Cassidy\'s hand is "+ cpu_hand + " and your hand is " + user_hand + ". YOU LOOSE!!!");
+        }
+    else if (computerHand==2)
+        { if (userHand==1)
+            System.out.println("Cassidy\'s hand is "+ cpu_hand + " and your hand is " + user_hand + ". YOU LOOSE!!!");
+        else System.out.println("Cassidy\'s hand is "+ cpu_hand + " and your hand is " + user_hand + ". YOU WIN!!!");
+        }
+    else
+        { if (userHand==1)
+            System.out.println("Cassidy\'s hand is "+ cpu_hand + " and your hand is " + user_hand + ". YOU WIN!!!");
+        else System.out.println("Cassidy\'s hand is "+ cpu_hand + " and your hand is " + user_hand + ". YOU LOOSE!!!");
+        }
+        }
+    }
+    
+    }
