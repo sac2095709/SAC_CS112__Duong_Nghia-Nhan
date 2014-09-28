@@ -24,23 +24,26 @@ public class RockPaperScissorGame {
     System.out.println("Wellcome to \"Rocks-Papers-Scissors\" Game Challenge!");
     System.out.println("My name is Cassidy, I am a computer user who will play with you in this game challenge!");
     System.out.println("");
-    
-    computerHand= 1 + (int)(Math.random()*3);
-        if (computerHand==1)
-        {cpu_hand="ROCK";}
-        else if (computerHand==2)
-        {cpu_hand="PAPER";}
-        else {cpu_hand="SCISSOR";}
         
     System.out.print("Computer captured Cassidy\'s hand, what is your hand?\nChoose number for: 1.Rock / 2.Paper / 3.Scissor exactly!: ");
-    userHand=hand.nextInt();   
+    userHand=hand.nextInt();
+    System.out.println();
         
     while ((userHand!=1)&&(userHand!=2)&&(userHand!=3))
     {
         System.out.printf("%d is not a valid response?\nChoose number again for: 1.Rock / 2.Paper / 3.Scissor exactly!: ",userHand);
         userHand=hand.nextInt();
+        System.out.println();
     }
     
+    while ((userHand==1)||(userHand==2)||(userHand==3))
+    {   computerHand= 0 + (int)(Math.random()*3);
+        if (computerHand==1)
+        {cpu_hand="ROCK";}
+        else if (computerHand==2)
+        {cpu_hand="PAPER";}
+        else {cpu_hand="SCISSOR";}
+       
         if (userHand==1)
         {user_hand="ROCK";}
         else if (userHand==2)
@@ -48,7 +51,8 @@ public class RockPaperScissorGame {
         else user_hand="SCISSOR";
         
     if(computerHand==userHand)
-        System.out.println("Cassidy\'s hand is "+ cpu_hand + " and your hand is " + user_hand + ". DRAW, no winner!!!");
+    {System.out.println("Cassidy\'s hand is "+ cpu_hand + " and your hand is " + user_hand + ". DRAW, no winner!!!");
+     System.out.println();}
     else
     {
     if (computerHand==1)
@@ -67,6 +71,14 @@ public class RockPaperScissorGame {
         else System.out.println("Cassidy\'s hand is "+ cpu_hand + " and your hand is " + user_hand + ". YOU LOOSE!!!");
         }
         }
+    
+    System.out.println("Choose number again for: 1.Rock / 2.Paper / 3.Scissor\nIf you want to stop this game, type 4: ");
+    userHand=hand.nextInt();
+    System.out.println();
+    
+    if (userHand==4)
+    System.exit(0);
+    }
     }
     
     }
