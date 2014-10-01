@@ -1,0 +1,44 @@
+
+
+package guessanumbergamelab3;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Nghia-Nhan D Duong
+ */
+public class GuessAnumberGameLab3 {
+
+ 
+    public static void main(String[] args) {
+ Scanner input = new Scanner (System.in);
+int computerNum;
+int userNum;
+String decision;
+boolean resume = true;
+
+while (resume = true){
+computerNum = 0 + (int) ( Math.random() * 100 );
+
+System.out.print("Enter your guess number between 0 & 100: ");
+       userNum = input.nextInt();
+while (userNum != computerNum)
+{if (userNum > computerNum)
+System.out.printf("Your number is %d, bigger than the Computer-Number\n ",userNum);
+else if (userNum < computerNum)   
+System.out.printf("Your number is %d, smaller than the Computer-Number\n",userNum);
+
+System.out.print("Enter your guess number again: ");
+userNum = input.nextInt();
+}
+if (userNum == computerNum)
+{System.out.printf("It's correct, Computer Number is %d\n",computerNum);
+System.out.print("Do you wish to continue? (Y/N) ");
+    decision = input.next();
+    if (decision.equals("N") || decision.equals("n"))
+    {System.exit(0);}
+    else    {System.out.print("Try again. ");
+    resume = true;
+    }}
+}
+    }}
