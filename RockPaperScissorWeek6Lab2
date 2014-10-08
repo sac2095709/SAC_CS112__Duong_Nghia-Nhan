@@ -1,0 +1,53 @@
+/*
+ * Nghia-Nhan D Duong
+ * CMPR112
+ * Java Project Week 6
+ * October 07th 2014
+ */
+
+
+package rockpaperscissorgameweek6lab2;
+import javax.swing.JOptionPane;
+/**
+ * @author NGHIA-NHAN D. DUONG
+ */
+public class RockPaperScissorGameWeek6Lab1 {
+
+    public static void main(String[] args) {
+  // Prompt the user to input the option they choose
+  String userHand = JOptionPane.showInputDialog(
+    "Enter rock, paper, or scissor:");
+  // Convert to lower case
+  userHand = userHand.toLowerCase();
+  // Generate a random number
+  // Scissor (0),  rock (1), paper (2)
+  int random = (int)(Math.random() * 3);
+  String computerHand; // Computer's choice
+  if (random == 0)
+   computerHand = "rock";
+  else if (random == 1)
+   computerHand = "paper";
+  else
+   computerHand = "scissor";
+  String message = "The computer is " + computerHand + ". You are "
+    + userHand;
+  // Determine who win
+  boolean bothDraw = computerHand.equals(userHand);
+  boolean compWin =
+   ((computerHand.equals("rock") && userHand.equals("scissor")) ||
+   (computerHand.equals("paper") && userHand.equals("rock")) ||
+   (computerHand.equals("scissor") && userHand.equals("paper")));
+   
+  // Prepare the message
+  if (compWin)
+   message += ". Computer Won.";
+  else if (bothDraw)
+   message += " too. It is Tie";
+  // There are 3 options, computer win, tie, or you win
+  // So we don't have to test here, if the code reach here, human win.
+  else
+   message += ". You Won";
+  // Display the result on the screen
+  JOptionPane.showMessageDialog(null, message);
+ }
+}
