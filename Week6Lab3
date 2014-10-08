@@ -1,0 +1,66 @@
+/**
+ * @author Nghia-Nhan D Duong
+ *         Date: 10/7/14
+ *         Time: 9:50 PM
+ */
+
+package week6lab3;
+import javax.swing.*;
+import java.util.Random;
+/**
+ *
+ * @author Nghia-Nhan D Duong
+ */
+public class Week6Lab3 {
+
+
+public static void main(String[] args) {
+
+        int count = 1; 
+        int continueGame; 
+        Random rand = new Random();
+        boolean playGame = true; // Loop control
+        boolean winingGuess;
+        boolean greaterGuess;
+
+        while (playGame) { 
+            String message; 
+            String userGuessStr; 
+            String roundTitle = String.format("Round %d", count);
+
+            int targetNumber = rand.nextInt(11);
+            System.out.println(targetNumber);
+
+            do {
+                message = "Please enter an integer between 0 and 10";
+                userGuessStr = JOptionPane.showInputDialog(null, message, roundTitle, JOptionPane.QUESTION_MESSAGE);
+            } while (userGuessStr == null || userGuessStr.equals(""));
+
+            int userGuessInt = Integer.parseInt(userGuessStr); 
+
+            winingGuess = (userGuessInt == targetNumber);
+            greaterGuess = (userGuessInt > targetNumber);
+            if (winingGuess) {
+                message = "Congrats! You guessed the number! Round Over.";
+                roundTitle = "You Won!";
+            } else if (!greaterGuess) {
+                message = "Sorry, you were too low";
+                roundTitle = "You lost";
+            } else {
+                message = "Sorry, you were too high...";
+                roundTitle = "You lost";
+            }
+            JOptionPane.showMessageDialog(null, message, roundTitle, JOptionPane.INFORMATION_MESSAGE); // Result display
+            count++; //increment loop counter
+
+            // Ask user for continuation of game
+            message = "Would you like to play again? Y or N";
+            continueGame = JOptionPane.showConfirmDialog(null, message, "Continue?", JOptionPane.YES_NO_OPTION);
+            if (continueGame == JOptionPane.NO_OPTION) {
+                playGame = false;
+            }
+        }
+        JOptionPane.showMessageDialog(null, "Game Over");
+    }
+
+}
