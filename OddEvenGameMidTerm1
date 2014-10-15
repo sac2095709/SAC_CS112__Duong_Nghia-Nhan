@@ -4,7 +4,6 @@
  *         Mid-Term Test
  */
 package oddevengame;
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 
