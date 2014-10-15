@@ -15,7 +15,7 @@ public class OddEvenGame {
   // Convert to lower case
   userGuess = userGuess.toLowerCase();
   /* Generate a random number
-     Odd (0),  Even (1), paper (2)*/
+     Odd (0),  Even (1)*/
   int randomNumber = (int)(Math.random() * 101);
   String computerNumber; // Computer's choice
   if (randomNumber%2 == 0)
